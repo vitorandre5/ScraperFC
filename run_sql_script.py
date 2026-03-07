@@ -11,11 +11,11 @@ except ImportError:
     import psycopg2
 
 # Configurações do banco
-DB_HOST = "db.safet1ps.supabase.co"
+DB_HOST = "db.kkfbwquqzoxjtwakfpsg.supabase.co"
 DB_PORT = 5432
 DB_NAME = "postgres"
 DB_USER = "postgres"
-DB_PASSWORD = "1zqGQjBi6rCNi06zw2Gl5aLG90qrQep8"
+DB_PASSWORD = "Mar1aLu1sa2022@"
 
 def main():
     print("🔗 Conectando ao Supabase...")
@@ -86,7 +86,7 @@ def main():
     except psycopg2.OperationalError as e:
         print(f"❌ Erro de conexão: {e}")
         print("\nVerifique:")
-        print("  - Host correto: db.safet1ps.supabase.co")
+        print("  - Host correto: db.kkfbwquqzoxjtwakfpsg.supabase.co")
         print("  - Credenciais do banco")
         print("  - Conexão com internet")
         return 1
@@ -101,3 +101,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+

@@ -11,11 +11,11 @@ load_dotenv()
 
 # Database connection parameters
 # Self-hosted Supabase at localhost
-DB_HOST = "127.0.0.1"
+DB_HOST = "db.kkfbwquqzoxjtwakfpsg.supabase.co"
 DB_PORT = 5432
 DB_NAME = "postgres"
 DB_USER = "postgres"
-DB_PASSWORD = "1zqGQjBi6rCNi06zw2Gl5aLG90qrQep8"
+DB_PASSWORD = "Mar1aLu1sa2022@"
 
 # SQL Script
 SQL_SCRIPT = """
@@ -180,8 +180,8 @@ def main():
     except psycopg2.OperationalError as e:
         print(f"❌ Erro de conexão: {e}")
         print("\nVerifique:")
-        print("  - O Supabase está rodando?")
-        print("  - Host correto: 127.0.0.1")
+        print("  - O Supabase está acessível?")
+        print("  - Host correto: db.kkfbwquqzoxjtwakfpsg.supabase.co")
         print("  - Porta correta: 5432")
         print("  - Credenciais corretas")
         
@@ -193,3 +193,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
