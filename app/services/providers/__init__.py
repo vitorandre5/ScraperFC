@@ -1,7 +1,6 @@
 """Provider factory and registry."""
 from typing import Dict, Optional, List
 from app.services.providers.base_provider import BaseProvider
-from app.services.providers.sofascore_provider import SofascoreProvider
 from app.core.config import settings
 from app.core.logging import get_logger
 
@@ -19,6 +18,8 @@ class ProviderRegistry:
         """Initialize enabled providers based on settings."""
         if settings.ENABLE_SOFASCORE:
             try:
+                # Import lazily so optional provider deps don't crash app startup.
+                from app.services.providers.sofascore_provider import SofascoreProvider
                 self.register_provider(SofascoreProvider())
                 logger.info("Sofascore provider registered")
             except Exception as e:
