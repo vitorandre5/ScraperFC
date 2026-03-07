@@ -34,7 +34,7 @@ COPY app/ ./app/
 
 # Create non-root user
 RUN useradd -m -u 1000 appuser && \
-    mkdir -p /usr/local/lib/python3.11/site-packages/botasaurus_requests/bin/temp && \
+    rm -rf /usr/local/lib/python3.11/site-packages/botasaurus_requests/bin/temp && \
     chown -R appuser:appuser /app /usr/local/lib/python3.11/site-packages/botasaurus_requests
 USER appuser
 

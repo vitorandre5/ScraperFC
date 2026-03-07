@@ -2,7 +2,7 @@
 import os
 from functools import lru_cache
 from typing import Optional
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 from pydantic_settings import BaseSettings
 
 
@@ -64,7 +64,8 @@ class Settings(BaseSettings):
             return db_url
 
         user, password = creds.split(":", 1)
-        encoded_password = quote(password, safe="")
+        # Normalize once: supports raw and already URL-encoded passwords.
+        encoded_password = quote(unquote(password), safe="")
         return f"{scheme}://{user}:{encoded_password}@{host_part}"
 
     @property
