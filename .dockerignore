@@ -1,0 +1,74 @@
+# Docker ignore file
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (not needed in container)
+docs/
+*.md
+!README.md
+
+# Tests (not needed in production container)
+test/
+.pytest_cache/
+.coverage
+htmlcov/
+pytest.toml
+tox.ini
+
+# Logs
+*.log
+logs/
+
+# Database files (not needed in container)
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache
+.mypy_cache/
+.ruff_cache/
+.botasaurus/
+task-data/
+
+# Docker files
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Development files
+Makefile
+alembic.ini
+alembic/
